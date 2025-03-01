@@ -1,0 +1,20 @@
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce
+    restart: always
+    ports:
+      - "9000:9000/tcp"
+    environment:
+      - TZ=Europe/London
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/portainer:/data
+
+  cloudflare:
+    container_name: cloudflare-tunnel
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=$CF_TUNNEL_TOKEN
