@@ -1,1 +1,1 @@
-Docker compose files located in /opt
+Docker compose files located in /srv
