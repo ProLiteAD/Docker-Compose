@@ -1,6 +1,6 @@
 services:
   webtest:
-    container_name: test-website
-    image: prolitead/website-docker-test:2.0
+    container_name: webtest
+    image: prolitead/webtest:latest
     ports:
       - "3000:3000/tcp"

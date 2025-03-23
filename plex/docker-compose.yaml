@@ -11,6 +11,6 @@ services:
 #      - PLEX_CLAIM=
       - TZ=Europe/London
     volumes:
-      - /opt/plex/database:/config
-      - /opt/plex/media/movies:/movies
-      - /opt/plex/media/tv:/tv
+      - /srv/docker/volumes/plex/database:/config
+      - /srv/docker/volumes/plex/media/movies:/movies
+      - /srv/docker/volumes/plex/media/tv:/tv

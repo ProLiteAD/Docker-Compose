@@ -9,7 +9,7 @@ services:
       - TZ=Europe/London
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /opt/portainer:/data
+      - /srv/docker/volumes/portainer:/data
 
   cloudflare:
     container_name: cloudflare-tunnel
